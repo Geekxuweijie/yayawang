@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="yaya:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="lcks-SSM.war">
+      <element id="artifact" artifact-name="yaya:war exploded" />
+    </root>
+  </artifact>
+</component>
