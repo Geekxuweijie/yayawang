@@ -28,7 +28,7 @@ public class IndexController{
     @RequestMapping("category")
     public void findCategory(HttpServletResponse response) throws IOException {
           List<Integer> cids = categoryService.selectCidParentIdForZero();
-          List<Category> categoryList = new ArrayList<Category>();
+          List<Category> categoryList = new ArrayList      <Category>();
           for(int i=0;i<cids.size();i++){
               Category category = categoryService.selectByPrimaryKey(cids.get(i));
               categoryList.add(category);
