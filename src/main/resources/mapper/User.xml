@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.UserMapper">
+
+	<resultMap type="User" id="UserResult">
+		<id column="userId" property="userId" javaType="int" />
+		<result column="userName" property="userName" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+	</resultMap>
+	<select id="selectUserByUser" resultMap="UserResult" >
+		select * from yaya_user where userName=#{userName} and password=#{password}
+	</select>
+  
+  	<select id="selectUserByuserName" resultMap="UserResult">
+  		select * from yaya_user where userName=#{userName}
+  	</select>
+  	
+  	<insert id="saveUser" parameterType="User">
+  		insert into yaya_user (userName,password) values(#{userName},#{password})
+  	</insert>
+  	
+</mapper>
